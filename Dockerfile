@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt .
 
 # Install any dependencies
-RUN pip install --no-cache-dir --no-deps -r requirements.txt
+RUN pip install --no-cache-dir --ignore-installed -r requirements.txt
 
 # Copy the content of the local src directory to the working directory
 COPY . .
